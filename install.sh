@@ -20,7 +20,7 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git /home/gitpod/.o
 sed -i "/^ZSH_THEME=\"/s/.*/ZSH_THEME=\"powerlevel10k\/powerlevel10k\"/g" /home/gitpod/.zshrc
 
 #Install zsh-autosuggestion
-git clone https://github.com/zsh-users/zsh-autosuggestions /home/gitpod/oh-my-zsh/custom/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-autosuggestions /home/gitpod/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 
 #install zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git /home/gitpod/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
