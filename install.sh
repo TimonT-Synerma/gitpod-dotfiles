@@ -1,4 +1,3 @@
-
 #Oh My Zsh plugins to install
 plugins="git colorize zsh-autosuggestions zsh-syntax-highlighting"
 
@@ -35,5 +34,3 @@ git clone https://github.com/zsh-users/zsh-autosuggestions /home/gitpod/.oh-my-z
 
 #install zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git /home/gitpod/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
-
-
