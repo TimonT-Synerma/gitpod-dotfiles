@@ -28,7 +28,7 @@ fi
 echo '[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh' >> /home/gitpod/.zshrc
 
 #copy p10k config file from dotfiles repo to workspace
-mv $(pwd)/.p10k.zsh /home/gitpod/.p10k.zsh
+mv ~/.dotfiles/.p10k.zsh /home/gitpod/.p10k.zsh
 
 #Install zsh-autosuggestion
 git clone https://github.com/zsh-users/zsh-autosuggestions /home/gitpod/.oh-my-zsh/custom/plugins/zsh-autosuggestions
