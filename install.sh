@@ -1,6 +1,6 @@
 
 #Oh My Zsh plugins to install
-plugins="git colorize zsh-autosuggestion zsh-syntax-highlighting"
+plugins="git colorize zsh-autosuggestions zsh-syntax-highlighting"
 
 aliases='alias dcd="docker compose -f docker-compose.dev.yml"
 alias dcdr="docker compose -f docker-compose.dev.yml run rails"
