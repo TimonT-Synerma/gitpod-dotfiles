@@ -14,7 +14,7 @@ sed -i "/^plugins/s/plugins=\(.*\)/plugins=\($plugins\)/g" /home/gitpod/.zshrc
 echo $aliases >> /home/gitpod/.oh-my-zsh/custom/aliases.zsh
 
 #Install powerlevel10k
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git /home/gitpod/.oh-my-zsh/custom}/themes/powerlevel10k
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git /home/gitpod/.oh-my-zsh/custom/themes/powerlevel10k
 #Write theme to .zshrc
 sed -i "/^ZSH_THEME=\"/s/.*/ZSH_THEME=\"powerlevel10k\/powerlevel10k\"/g" /home/gitpod/.zshrc
 
