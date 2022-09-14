@@ -1,5 +1,6 @@
+
 #Oh My Zsh plugins to install
-plugins="git colorize zsh-syntax-highlighting"
+plugins="git colorize zsh-autosuggestion zsh-syntax-highlighting"
 
 aliases='alias dcd="docker compose -f docker-compose.dev.yml"
 alias dcdr="docker compose -f docker-compose.dev.yml run rails"
@@ -18,6 +19,17 @@ echo $aliases >> /home/gitpod/.oh-my-zsh/custom/aliases.zsh
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git /home/gitpod/.oh-my-zsh/custom/themes/powerlevel10k
 #Write theme to .zshrc
 sed -i "/^ZSH_THEME=\"/s/.*/ZSH_THEME=\"powerlevel10k\/powerlevel10k\"/g" /home/gitpod/.zshrc
+
+#TODO: copy .p10k config
+
+#Append p10k config to beginning of .zshrc file. Enables instant prompt
+echo 'if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+'$(cat /home/gitpod/.zshrc) > /home/gitpod/zshrc
+echo '[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh' >> /home/gitpod/.zshrc
+
+mv $(pwd)/.p10k.zsh /home/gitpod/.p10k.zsh
 
 #Install zsh-autosuggestion
 git clone https://github.com/zsh-users/zsh-autosuggestions /home/gitpod/.oh-my-zsh/custom/plugins/zsh-autosuggestions
