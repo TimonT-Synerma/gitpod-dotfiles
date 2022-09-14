@@ -26,7 +26,7 @@ sed -i "/^ZSH_THEME=\"/s/.*/ZSH_THEME=\"powerlevel10k\/powerlevel10k\"/g" /home/
 echo 'if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
-'$(cat /home/gitpod/.zshrc) > /home/gitpod/zshrc
+'$(cat /home/gitpod/.zshrc) > /home/gitpod/.zshrc
 echo '[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh' >> /home/gitpod/.zshrc
 
 mv $(pwd)/.p10k.zsh /home/gitpod/.p10k.zsh
