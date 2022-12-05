@@ -5,7 +5,9 @@ aliases='alias dcd="docker compose -f docker-compose.dev.yml"
 alias dcdr="docker compose -f docker-compose.dev.yml run rails"
 alias dct="docker compose -f docker-compose.test.yml"
 alias lzg="lazygit"
-alias lzd="lazydocker"'
+alias lzd="lazydocker"
+alias cookie="docker-compose -f docker-compose.dev.yml run rails bundle exec rails runner \"Apartment::Tenant.switch(Site.first.slug) do puts Rails.application.routes.url_helpers.recaptcha_cookie_url(cookie_secret: CaptchaDisablingRule.where(rule: '"'"'by_cookie'"'"').first.cookie_secret) end\" -e development"'
+
 
 #Install Oh My Zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
