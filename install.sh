@@ -5,7 +5,8 @@ aliases='alias dcd="docker compose -f docker-compose.dev.yml"
 alias dcdr="docker compose -f docker-compose.dev.yml run rails"
 alias dct="docker compose -f docker-compose.test.yml"
 alias lzg="lazygit"
-alias lzd="lazydocker"'
+alias lzd="lazydocker"
+alias fix-db="rm db/schema_dump.yml db/schema.rb && dcdr rails db:migrate && git stage db/schema_dump.yml db/schema.rb"'
 
 #Install Oh My Zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
