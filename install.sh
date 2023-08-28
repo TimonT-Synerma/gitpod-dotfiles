@@ -6,7 +6,9 @@ alias dcdr="docker compose -f docker-compose.dev.yml run rails"
 alias dct="docker compose -f docker-compose.test.yml"
 alias lzg="lazygit"
 alias lzd="lazydocker"
-alias fix-db="rm db/schema_dump.yml db/schema.rb 2> /dev/null || dcdr rails db:migrate && git stage db/schema_dump.yml db/schema.rb"'
+alias fix-db="rm db/schema_dump.yml db/schema.rb 2> /dev/null || dcdr rails db:migrate && git stage db/schema_dump.yml db/schema.rb"
+alias reset-db="dcd down  && docker volume rm eventon_postgres-data-development && dcdr bash -c \"rails db:migrate && rails db:seed\""
+alias reset-db-gitpod="dcd down  && docker volume rm eventon_postgres-data-development && dcdr bash -c \"rails db:migrate && rails db:seed\" && rm .gitpod.seeded 2> /dev/null || bash ./bin/gp-user-seed"'
 
 #Install Oh My Zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
